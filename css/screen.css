@@ -1,6 +1,6 @@
 nav { position: flex; width: 100%; display: flex; justify-content: center; background: rgba(255, 255, 255, 0.5); z-index: 999; }
 
-nav a { display: inline-block; text-decoration: bold; padding: 4px 4px; color: #444; letter-spacing: 1px; font-size: .8em; text-shadow: 4px 4px 4px #aaa; }
+nav a { display: inline-block; text-decoration: none; padding: 4px 4px; color: #444; letter-spacing: 1px; font-size: .7em; text-shadow: 4px 4px 4px #aaa; }
 
 nav a.active { color: #F00; }
 
