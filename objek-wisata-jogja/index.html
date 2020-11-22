@@ -217,6 +217,9 @@ nav  {position:flex; width:100%; display:flex; justify-content:center; backgroun
 nav a {display:inline-block; text-decoration:none; padding:4px; color:#444; letter-spacing:1px; font-size:.6em; text-shadow:1px 1px 1px #aaa} nav a.active {color:red} nav a:hover {color:#000}
 h1  { text-decoration: underline overline;
     }
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-video@0.4.6/dist/css/splide-extension-video.min.css">
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-video@0.4.6/dist/js/splide-extension-video.min.js">
+new Splide( '#splide' ).mount( window.splide.Extensions );
 </style>
 </head>
   <body>
@@ -241,7 +244,17 @@ h1  { text-decoration: underline overline;
 	<div class="page-header"> 
          <h1>Objek Wisata Jogja</h1>
 	</div>
-
+<div class="splide">
+	<div class="splide__track">
+		<ul class="splide__list">
+			<li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=spfw7Pykqy4">
+				<img src="/uploads/maya.jpg">
+			<li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=cdz__ojQOuU">
+				<img src="/uploads/pindul.jpg">
+			</li>
+		</ul>
+	</div>
+</div>
 <article class="content" data-cms-content-wrapper="/_layouts/page.html">
 	<div class="editable" data-cms-source="/objek-wisata-jogja/index.html" data-cms-index="0">
 		<p>Kami berusaha mengumpulkan destinasi tujuan obyek wisata jogja favorit ini untuk menjadi tujuan utama wisatawan yang menjadi pelanggan kami, kami akan mengupdate terus daftar seperti di bawah ini:</p><hr />
