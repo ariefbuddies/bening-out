@@ -218,6 +218,52 @@ nav  {position:flex; width:100%; display:flex; justify-content:center; backgroun
 nav a {display:inline-block; text-decoration:none; padding:4px; color:#444; letter-spacing:1px; font-size:.6em; text-shadow:1px 1px 1px #aaa} nav a.active {color:red} nav a:hover {color:#000}
 h1  { text-decoration: underline overline;
 </style>
+<style>
+<!-- Demo styles -->
+    html,
+    body {
+      position: relative;
+      height: 50%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper-container {
+      width: 50%;
+      height: 50%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+</style>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+
 </head>
   <body>
 		<nav>
