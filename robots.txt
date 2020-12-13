@@ -1,3 +1,9 @@
+User-agent: Media Partners-Google
+Disallow:
+User-agent: Googlebot
+Allow: /
 User-agent: *
 Disallow: /advice
+User-agent: *
+Disallow: /
 Sitemap: https://beningabaditransport.com/sitemap.xml
