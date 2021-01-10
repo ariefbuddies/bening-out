@@ -1,7 +1,7 @@
 /* CSS Resets */
 * {
-	padding:0;
-	margin:0;
+	padding: 0;
+	margin: 0;
 }
 img {
 	max-width: 100%;
@@ -13,12 +13,12 @@ ul,ol {
 /* end css reset */
 
 .container {	/* posisikan letak slidernya */
-	margin:10% auto;
+	margin: 10% auto;
 	position: relative;
 	overflow: hidden;
 }
 .container, ul.slide li img{
-	width:320px; /* Sesuaikan sendiri */
+	width: 320px; /* Sesuaikan sendiri */
 	height: 240px;  /* Sesuaikan sendiri */
 }
 
@@ -26,7 +26,7 @@ ul,ol {
 ul.slide {
 	position: absolute;
 	display: block;
-	width:400%;  /* <-- Angka 3 Bergantung pada jumlah slide */
+	width: 400%;  /* <-- Angka 3 Bergantung pada jumlah slide */
 }
 
 .caption {	/* styling untuk deskripsi setiap slide */
@@ -79,9 +79,9 @@ ul.slide {
 	  	transform: translateX(-200%);
 	}
 }       #nav-4:checked ~ ul.slide li {
-	  	-webkit-transform: translateX(-200%);
-	  	-moz-transform: translateX(-200%);
-	  	transform: translateX(-200%);
+	  	-webkit-transform: translateX(-300%);
+	  	-moz-transform: translateX(-300%);
+	  	transform: translateX(-300%);
 	}
 /* End, yang membuatnya jadi slider */
 
