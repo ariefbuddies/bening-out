@@ -18,7 +18,7 @@ ul,ol {
 	overflow: hidden;
 }
 .container, ul.slide li img{
-	width:330px; /* Sesuaikan sendiri */
+	width:320px; /* Sesuaikan sendiri */
 	height: 240px;  /* Sesuaikan sendiri */
 }
 
@@ -26,7 +26,7 @@ ul,ol {
 ul.slide {
 	position: absolute;
 	display: block;
-	width:300%;  /* <-- Angka 3 Bergantung pada jumlah slide */
+	width:400%;  /* <-- Angka 3 Bergantung pada jumlah slide */
 }
 
 .caption {	/* styling untuk deskripsi setiap slide */
@@ -59,7 +59,11 @@ ul.slide {
 	ul.slide li.slide-3 {
 		left: 200%;
 	}
-	#nav-1:checked ~ ul.slide li{
+	ul.slide li.slide-4 {
+		left: 300%;
+	}
+
+        #nav-1:checked ~ ul.slide li{
 	  	-webkit-transform: translateX(0%);
 		-moz-transform: translateX(0%);
 	  	transform: translateX(0%);
@@ -70,6 +74,11 @@ ul.slide {
 	 	transform: translateX(-100%);
 	}
 	#nav-3:checked ~ ul.slide li {
+	  	-webkit-transform: translateX(-200%);
+	  	-moz-transform: translateX(-200%);
+	  	transform: translateX(-200%);
+	}
+}       #nav-4:checked ~ ul.slide li {
 	  	-webkit-transform: translateX(-200%);
 	  	-moz-transform: translateX(-200%);
 	  	transform: translateX(-200%);
@@ -123,6 +132,8 @@ ul.slide {
 	#nav-2:checked ~ .nav-next label.nav-3,
 	#nav-3:checked ~ .nav-prev label.nav-2,
 	#nav-3:checked ~ .nav-next label.nav-1 {
+	#nav-4:checked ~ .nav-prev label.nav-3,
+	#nav-4:checked ~ .nav-next label.nav-1 {
 		z-index: 2;
 		opacity: 1;
 	}
