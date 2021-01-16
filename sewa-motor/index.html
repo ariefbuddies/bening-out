@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="id-ID">
-	<head>
+<head>
 <script src="https://www.googleoptimize.com/optimize.js?id=OPT-TG8TR64"></script>
 	<!-- Global Site Tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131533286-1"></script>
@@ -271,7 +271,7 @@ input[type=submit]:hover, .btn:hover { color: #fefefe; background-color: #73a9c9
 /*# sourceMappingURL=main.css.map */
  
 nav  {position:flex; width:100%; display:flex; justify-content:center; background:rgba(255,255,255,0.5);z-index:999}
-nav a {display:inline-block; text-decoration:none; padding:4px; color:#444; letter-spacing:1px; font-size:0.9em; text-shadow:1px 1px 1px #aaa} nav a.active {color:red} nav a:hover {color:#000}
+nav a {display:inline-block; text-decoration:none; padding:3px; color:#444; letter-spacing:1px; font-size:0.6em; text-shadow:1px 1px 1px #aaa} nav a.active {color:red} nav a:hover {color:#000}
 span.wave {
   animation-name: wave-animation;
   animation-duration: 2.5s;
@@ -884,7 +884,197 @@ h3  { text-decoration: underline overline;
 	</script>
 	</body>
 	</html>	
-        
+	<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+<title>BASlide</title>
+<style>
+* {
+	padding: 0;
+	margin: 0;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+ul,ol {
+	list-style-type: none;
+}
+/* end css reset */
+
+.containerz {	/* posisikan letak slidernya */
+	margin: 1% auto;
+	position: relative;
+	overflow: hidden;
+}
+.containerz, ul.slide li img{
+	width: 320px; /* Sesuaikan sendiri */
+	height: 240px;  /* Sesuaikan sendiri */
+}
+
+
+ul.slide {
+	position: absolute;
+	display: block;
+	width: 400%;  /* <-- Angka 3 Bergantung pada jumlah slide */
+}
+
+.caption {	/* styling untuk deskripsi setiap slide */
+	position: absolute;
+	background-color: rgba(0,0,0,0.5);
+	bottom:0;
+	padding:1px;
+	color:#fff;
+	left: 0;
+	right: 0;
+}
+
+/* Yang membuatnya jadi slider */
+	ul.slide li {
+  		display: inline-block;
+  		float: left;
+  		-webkit-box-sizing:border-box;
+  		-moz-box-sizing:border-box;
+  		ox-sizing:border-box;
+  		-webkit-transition: -webkit-transform 2000ms;
+  		-moz-transition: -moz-transform 2000ms;
+  		transition: -webkit-transform 2000ms, transform 2000ms;
+	}
+	ul.slide li.slide-1 {
+		left: 0%;
+	}
+	ul.slide li.slide-2 {
+		left: 100%;
+	}
+	ul.slide li.slide-3 {
+		left: 200%;
+	}
+	ul.slide li.slide-4 {
+		left: 300%;
+	}
+
+        #nav-1:checked ~ ul.slide li{
+	  	-webkit-transform: translateX(0%);
+		-moz-transform: translateX(0%);
+	  	transform: translateX(0%);
+	}
+	#nav-2:checked ~ ul.slide li{
+	  	-webkit-transform: translateX(-100%);
+	  	-moz-transform: translateX(-100%);
+	 	transform: translateX(-100%);
+	}
+	#nav-3:checked ~ ul.slide li {
+	  	-webkit-transform: translateX(-200%);
+	  	-moz-transform: translateX(-200%);
+	  	transform: translateX(-200%);
+	}
+       #nav-4:checked ~ ul.slide li {
+	  	-webkit-transform: translateX(-300%);
+	  	-moz-transform: translateX(-300%);
+	  	transform: translateX(-300%);
+	}
+/* End, yang membuatnya jadi slider */
+
+
+/* Navigator */
+
+.radio-nav { /* menghilangkan radio button */
+	display: none;
+}
+	
+	/* styling untuk tombol next dan previous slide */
+	.nav-arrow {
+		position: absolute;
+		top:45%;
+		width:50px;
+		height: 50px;
+	}
+	.nav-next {
+		right:10px;
+	}
+	.nav-prev {
+		left:10px;
+	}
+	.nav-arrow label {
+		-webkit-transition:all 0.3s;
+		-moz-transition:all 0.3s;
+		transition:all 0.3s;
+		background-color: rgba(0,0,0,0.3);
+		color: #fff;
+		border-radius: 50%;
+		display: block;
+		position: absolute;
+		padding:15px 20px;
+		cursor: pointer;
+		z-index: 1;
+		opacity: 0;
+		font-weight: bold;
+		line-height: 1;
+	}
+	.containerz:hover .nav-arrow label{
+		background-color: rgba(0,0,0,0.7);
+	}
+	/* end styling untuk tombol next dan previous slide */
+	/*Setiap slide mempunya tombol prev dan next-nya masing-masing. Nah, tampilkan tombol yang tepat dengan kode dibawah ini*/ 
+	#nav-1:checked ~ .nav-prev label.nav-4,
+	#nav-1:checked ~ .nav-next label.nav-2,
+	#nav-2:checked ~ .nav-prev label.nav-1,
+	#nav-2:checked ~ .nav-next label.nav-3,
+	#nav-3:checked ~ .nav-prev label.nav-2,
+	#nav-3:checked ~ .nav-next label.nav-4, 
+	#nav-4:checked ~ .nav-prev label.nav-3,
+	#nav-4:checked ~ .nav-next label.nav-1 {
+		z-index: 2;
+		opacity: 1;
+	}
+	/* end */
+
+/* Navigator */
+</style>
+</head>
+<body>
+
+<div class="containerz">
+	<input type="radio" name="slide" class="radio-nav" id="nav-1" checked/>
+	<input type="radio" name="slide" class="radio-nav" id="nav-2"/>
+	<input type="radio" name="slide" class="radio-nav" id="nav-3"/>
+        <input type="radio" name="slide" class="radio-nav" id="nav-4"/>
+
+	<ul class="slide">
+		<li class="slide-1">
+			<img src="https://ayzeapykfq.cloudimg.io/v7/raw.githubusercontent.com/ariefbuddies/bening-out/master/uploads/s1.webp"/>
+			<div class="caption">Rental Motor 1</div>
+		</li>
+		<li class="slide-2">
+			<img src="https://ayzeapykfq.cloudimg.io/v7/raw.githubusercontent.com/ariefbuddies/bening-out/master/uploads/s2.webp"/>
+			<div class="caption">Rental Motor 2</div>
+		</li>
+		<li class="slide-3">
+			<img src="https://ayzeapykfq.cloudimg.io/v7/raw.githubusercontent.com/ariefbuddies/bening-out/master/uploads/s3.webp"/>
+			<div class="caption">Rental Motor 3</div>
+		</li>
+                <li class="slide-4">
+			<img src="https://ayzeapykfq.cloudimg.io/v7/raw.githubusercontent.com/ariefbuddies/bening-out/master/uploads/s4.webp"/>
+			<div class="caption">Rental Motor 4</div>
+		</li>
+	</ul>
+
+	<div class="nav-arrow nav-next">
+		<label class="nav-1" for="nav-1">></label>
+		<label class="nav-2" for="nav-2">></label>
+		<label class="nav-3" for="nav-3">></label>
+		<label class="nav-4" for="nav-4">></label>
+	</div>
+	<div class="nav-arrow nav-prev">
+		<label class="nav-1" for="nav-1"><</label>
+		<label class="nav-2" for="nav-2"><</label>
+		<label class="nav-3" for="nav-3"><</label>
+                <label class="nav-4" for="nav-4">></label>
+	</div>
+</div>
+</body>
+</html>        
 
 			<section class="quote-section">
 
@@ -928,7 +1118,7 @@ h3  { text-decoration: underline overline;
 
 									</a>
 
-								</li>
+								</li><br>
 
 							
 
@@ -944,7 +1134,7 @@ h3  { text-decoration: underline overline;
 
 									</a>
 
-								</li>
+								</li><br>
 
 							
 
@@ -960,7 +1150,7 @@ h3  { text-decoration: underline overline;
 
 									</a>
 
-								</li>
+								</li><br>
 
 							
 
