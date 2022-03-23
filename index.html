@@ -352,14 +352,6 @@ span.wave {
   content: "";
   display: table;
 }
-img {
-    transition:transform 0.25s ease;
-}
-
-img:hover {
-    -webkit-transform:scale(2.5);
-    transform:scale(2.5);
-}	     	       
 </style>
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 		<link rel="icon" type="image/png" href="/touch-icon.png" sizes="192x192" />
@@ -405,7 +397,17 @@ img:hover {
 			<div class="container" data-cms-content-wrapper="/_layouts/default.html">
 				<html lang="id">
 </body>
-<section class="main">
+<style>
+img {
+    transition:transform 0.25s ease;
+}
+
+img:hover {
+    -webkit-transform:scale(2.5);
+    transform:scale(2.5);
+}	     	       
+</style>
+	<section class="main">
 <div class="container">
 	<div class="page-header"> 
          <a href="https://api.whatsapp.com/send?phone=62818267443&text=" class="float3" target="_blank">
