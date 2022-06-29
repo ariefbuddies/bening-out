@@ -2,5 +2,4 @@ User-agent: *
 Disallow:
 User-agent: Googlebot
 Allow:
-Disallow: /advice
 Sitemap: https://beningabaditransport.com/sitemap.xml
